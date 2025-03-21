@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Fun 💖</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fff0f5;
+      padding-top: 100px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    img {
+      margin-top: 20px;
+      display: none;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    #secondButton {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hi Dahlia, hope you made it to Westminster safe! 💕</h1>
+  <p>Click the button for a little surprise since it is March 21 🌸</p>
+  <button onclick="showFlowers()">Click Me</button>
+
+  <img id="flowerGif" src="yellow.hibiscus.flower.gif" alt="Flowers">
+  <br>
+  <button id="secondButton" onclick="goToNextPage()"> Now I can do a bit better </button>
+  
+  <script>
+    function showFlowers() {
+      document.getElementById("flowerGif").style.display = "block";
+      document.getElementById("secondButton").style.display = "inline-block";
+    }
+
+    function goToNextPage() {
+        window.location.href = "questions.html";
+    }
+  </script>
+
+</body>
+</html>

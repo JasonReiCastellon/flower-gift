@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Quiz </title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #e6fff0;
+      padding-top: 80px;
+    }
+
+    input, button {
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Answer the right question you will move forward!!! 🌼</h1>
+  <p>When is the Water Lantern Festival? March 28th, March 29th, March 23rd? [case sensitive]</p>
+  <input type="text" id="answerInput" placeholder="Type your answer...">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div id="response"></div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answerInput").value;
+      const response = document.getElementById("response");
+  
+      if (input === "March 28th") {
+        response.textContent = "ooooo so close";
+      } else if (input === "March 23rd") {
+        response.textContent = "no that's the thai festival silly (ಠ_ಠ)(ಠ_ಠ)(ಠ_ಠ)";
+      } else if (input === "March 29th") {
+        response.textContent = "You better have checked your email it is at the harbor so we gotta dress nice and teach me to take your photos foo!! Wait a little longer";
+        setTimeout(() => {
+          window.location.href = "questionThree.html";
+        }, 6000); // 2-second delay before redirect
+      } else {
+        response.textContent = "hmm... try typing one of the options exactly as written, or are you testing if I put error exits???😐😑😐 ";
+      }
+    }
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Quiz </title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #e6f7ff;
+      padding-top: 80px;
+    }
+
+    input, button {
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Answer the right question you will move forward!!! 🌼</h1>
+  <p>What's my favorite color? red, maroon, or burgundy? [case sensitive]</p>
+  <input type="text" id="answerInput" placeholder="Type your answer...">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div id="response"></div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answerInput").value;
+      const response = document.getElementById("response");
+  
+      if (input === "red") {
+        response.textContent = "be for real right now bro... (¬_¬)";
+      } else if (input === "maroon") {
+        response.textContent = "omggggg nooooo 🤗";
+      } else if (input === "burgundy") {
+        response.textContent = "Yes you got it (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ 🎉🎉🎉🐶🐶🐶 now wait three seconds";
+        setTimeout(() => {
+          window.location.href = "questionTwo.html";
+        }, 3000); // 2-second delay before redirect
+      } else {
+        response.textContent = "hmm... try one of the options listed punk 🙄";
+      }
+    }
+  </script>
+  
+
+</body>
+</html>

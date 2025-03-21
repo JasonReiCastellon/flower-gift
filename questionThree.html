@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Last Question pretty deep stuff here🎯</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fffaf0;
+      padding-top: 80px;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: #ffb6c1;
+      color: white;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #nextBtn {
+      display: none;
+      margin-top: 30px;
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>One night I looked at you and I tell you everytime we are alone, but I knew... what were we doing? 👀</h1>
+  <p>(Take your time if you want for real)</p>
+
+  <button onclick="selectOption('Arguing, then headed to the Holy Cow')">Arguing, then headed to the Holy Cow</button>
+  <button onclick="selectOption('In an Uber on the way to the club')">In an Uber on the way to the club</button>
+  <button onclick="selectOption('At the winter festival in line for food')">At the winter festival in line for food</button>
+
+  <div id="response"></div>
+
+  <button id="nextBtn" onclick="goToNextPage()">Next ➡️</button>
+
+  <script>
+    const clickedOptions = new Set();
+
+    function selectOption(color) {
+      const response = document.getElementById("response");
+
+      clickedOptions.add(color);
+
+      if (color === "Arguing, then headed to the Holy Cow") {
+        response.textContent = "Nice night, but there are others";
+      } else if (color === "In an Uber on the way to the club") {
+        response.textContent = "this is technically right but...";
+      } else if (color === "At the winter festival in line for food") {
+        response.textContent = "yes, but what else";
+      }
+
+      if (clickedOptions.size === 3) {
+        document.getElementById("nextBtn").style.display = "inline-block";
+        response.textContent = "Okay okay, you've tried them all 😎 — you may proceed!";
+      }
+    }
+
+    function goToNextPage() {
+      window.location.href = "final.html"; // Or whatever page comes next
+    }
+  </script>
+
+</body>
+</html>
